@@ -1,0 +1,316 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+}
+
+/* Стилі для заголовка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 34px; /* Задаємо розмір шрифту 36px */
+    margin: 0;
+}
+
+.user_profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 40px;
+
+    cursor: pointer;
+}
+
+.user_profile_image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* Стилі для нижнього колонтитула */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.users_filter_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    max-height: 80%;
+    min-height: 80%;
+    background-color: lightgreen;
+}
+
+#search-input {
+    width: 86%;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.buttonsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.filterSelects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 20px;
+    margin: 0;
+    width: 88%;
+}
+
+/* Стилізація для елементу <select> */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    margin: 5px 5px;
+}
+
+/* Стилізація для опцій */
+option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.user_profiles_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    width: 70%;
+    max-height: 80%;
+    min-height: 80%;
+    padding: 0;
+
+    background-image: linear-gradient(to right, #2ecc71, #3498db);
+}
+
+/* Стилі для контейнера користувачів */
+#usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Стилі для елементу користувача */
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Горизонтальний зсув, вертикальний зсув, розмір розсіювання, колір тіні */
+    text-align: center;
+
+    margin: 20px;
+}
+
+.user img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+    align-self: center;
+    justify-self: flex-start;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Горизонтальний зсув, вертикальний зсув, розмір розсіювання, колір тіні */
+}
+
+.user p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dropDownMenu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 130px;
+
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Горизонтальний зсув, вертикальний зсув, розмір розсіювання, колір тіні */
+    border-radius: 3%;
+
+    position: absolute;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    height: 45px;
+}
+
+.profileButton, .logOutButton {
+    width: 80%;
+}
+
+.logOutButton {
+    background-color: darkred;
+}
+
+.logOutButtonPushed {
+    background-color: slategray;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Задаємо розмір шрифту 36px */
+        margin: 0;
+    }
+
+    .user_profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 55px;
+
+        cursor: pointer;
+    }
+
+    #search-input {
+        width: 84%;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        width: 100%;
+        margin: 5px 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 200px;
+        height: 35px;
+    }
+
+    .hackButton {
+        padding: 10px 5px;
+        margin: 5px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 90%;
+        height: 30px;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 160px;
+        height: 220px;
+        padding: 5px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Горизонтальний зсув, вертикальний зсув, розмір розсіювання, колір тіні */
+        text-align: center;
+
+        margin: 20px;
+    }
+
+    .user img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+
+        align-self: center;
+        justify-self: flex-start;
+    }
+
+    .user p {
+        margin: 5px 0;
+        font-size: 10px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="tabs">
+        <div class="tab tab-active" id="tab1" onclick="openTab('tab1')">Create Account</div>
+        <div class="tab" id="tab2" onclick="openTab('tab2')">Login</div>
+    </div>
+
+    <div class="tab-content active" id="tabContent1">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text" placeholder="andriy228" id="username" name="username">
+                <i class="fas fa-check-circle">
+                    <img src="check.png" width="20px" alt="">
+                </i>
+                <i class="fas fa-exclamation-circle">
+                    <img src="sign.png" width="20px" alt="">
+                </i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="email" placeholder="andriy228@gmail.com" id="email" name="email">
+                <i class="fas fa-check-circle">
+                    <img src="check.png" width="20px" alt="">
+                </i>
+                <i class="fas fa-exclamation-circle">
+                    <img src="sign.png" width="20px" alt="">
+                </i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password" placeholder="12345" id="password" name="password">
+                <i class="fas fa-check-circle">
+                    <img src="check.png" width="20px" alt="">
+                </i>
+                <i class="fas fa-exclamation-circle">
+                    <img src="sign.png" width="20px" alt="">
+                </i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Password confirm</label>
+                <input type="password" placeholder="andriy228" id="password-confirm" name="password-confirm">
+                <i class="fas fa-check-circle">
+                    <img src="check.png" width="20px" alt="">
+                </i>
+                <i class="fas fa-exclamation-circle">
+                    <img src="sign.png" width="20px" alt="">
+                </i>
+                <small>Error Message</small>
+            </div>
+
+            <button class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div class="tab-content" id="tabContent2">
+        <div class="header">
+            <h2>Login</h2>
+        </div>
+        <form class="form" id="login-form">
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text" placeholder="andriy228" id="login-username">
+                <i class="fas fa-check-circle">
+                    <img src="check.png" width="20px" alt="">
+                </i>
+                <i class="fas fa-exclamation-circle">
+                    <img src="sign.png" width="20px" alt="">
+                </i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Password</label>
+                <label for="login-password"></label>
+                <input type="password" placeholder="12345" id="login-password">
+                <i class="fas fa-check-circle">
+                    <img src="check.png" width="20px" alt="">
+                </i>
+                <i class="fas fa-exclamation-circle">
+                    <img src="sign.png" width="20px" alt="">
+                </i>
+                <small>Error Message</small>
+            </div>
+
+            <button class="submit-login-button">Login</button>
+        </form>
+    </div>
+</div>
+
+    <div class="successModalWindow">
+        <span class="successModalWindowSpan">Congratulations! You are in!</span>
+        <button class="successModalWindowOkButton">Ok</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

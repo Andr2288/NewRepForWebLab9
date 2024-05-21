@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome To YouHack - hack you neighbour!</h1>
+        <div class="user_profile">
+            <img class="user_profile_image" src="code-6127616_640.png" alt="">
+            <span>hacker_228</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="users_filter_div">
+            <input type="text" placeholder="search" id="search-input">
+
+            <div class="filterSelects">
+                <span>Filter by age</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByAgeSelectElementId" data-filter-by="age">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+
+                <span>Filter by name</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByNameSelectElementId" data-filter-by="name">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+
+                <span>Filter by location</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByLocationSelectElementId" data-filter-by="location">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+
+                <span>Filter by email</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByEmailSelectElementId" data-filter-by="email">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+            </div>
+
+            <div class="buttonsDiv">
+                <button class="sortByNameAscButton" data-sort-by="name" data-sort-direction="asc">Sort by name asc</button>
+                <button class="sortByNameDecButton" data-sort-by="name" data-sort-direction="desc">Sort by name dec</button>
+                <button class="sortByAgeAscButton" data-sort-by="age" data-sort-direction="asc">Sort by age asc</button>
+                <button class="sortByAgeDecButton" data-sort-by="age" data-sort-direction="dec">Sort by age dec</button>
+                <button class="sortByDateAscButton" data-sort-by="date" data-sort-direction="asc">Sort by date asc</button>
+                <button class="sortByDateDecButton" data-sort-by="date" data-sort-direction="dec">Sort by date dec</button>
+            </div>
+        </div>
+        <div class="user_profiles_div"></div>
+    </main>
+
+    <footer>
+        <p>© 2024 YouHack. Not all rights reserved.</p>
+    </footer>
+
+    <div class="dropDownMenu">
+        <button class="profileButton">Profile</button>
+        <button class="logOutButton">Log Out</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
