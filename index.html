@@ -9,109 +9,64 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
-    <div class="tabs">
-        <div class="tab tab-active" id="tab1" onclick="openTab('tab1')">Create Account</div>
-        <div class="tab" id="tab2" onclick="openTab('tab2')">Login</div>
-    </div>
-
-    <div class="tab-content active" id="tabContent1">
-        <div class="header">
-            <h2>Create Account</h2>
+    <header>
+        <h1>Welcome To YouHack - hack you neighbour!</h1>
+        <div class="user_profile">
+            <img class="user_profile_image" src="code-6127616_640.png" alt="">
+            <span>hacker_228</span>
         </div>
-        <form class="form" id="form">
-            <div class="form-control">
-                <label>Username</label>
-                <input type="text" placeholder="andriy228" id="username" name="username">
-                <i class="fas fa-check-circle">
-                    <img src="check.png" width="20px" alt="">
-                </i>
-                <i class="fas fa-exclamation-circle">
-                    <img src="sign.png" width="20px" alt="">
-                </i>
-                <small>Error Message</small>
+    </header>
+
+    <main>
+        <div class="users_filter_div">
+            <input type="text" placeholder="search" id="search-input">
+
+            <div class="filterSelects">
+                <span>Filter by age</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByAgeSelectElementId" data-filter-by="age">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+
+                <span>Filter by name</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByNameSelectElementId" data-filter-by="name">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+
+                <span>Filter by location</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByLocationSelectElementId" data-filter-by="location">
+                    <!-- Опції будуть додані програмно -->
+                </select>
+
+                <span>Filter by email</span>
+                <!-- Вихідний HTML-код елементу select -->
+                <select id="filterByEmailSelectElementId" data-filter-by="email">
+                    <!-- Опції будуть додані програмно -->
+                </select>
             </div>
 
-            <div class="form-control">
-                <label>Email</label>
-                <input type="email" placeholder="andriy228@gmail.com" id="email" name="email">
-                <i class="fas fa-check-circle">
-                    <img src="check.png" width="20px" alt="">
-                </i>
-                <i class="fas fa-exclamation-circle">
-                    <img src="sign.png" width="20px" alt="">
-                </i>
-                <small>Error Message</small>
+            <div class="buttonsDiv">
+                <button class="sortByNameAscButton" data-sort-by="name" data-sort-direction="asc">Sort by name asc</button>
+                <button class="sortByNameDecButton" data-sort-by="name" data-sort-direction="desc">Sort by name dec</button>
+                <button class="sortByAgeAscButton" data-sort-by="age" data-sort-direction="asc">Sort by age asc</button>
+                <button class="sortByAgeDecButton" data-sort-by="age" data-sort-direction="dec">Sort by age dec</button>
+                <button class="sortByDateAscButton" data-sort-by="date" data-sort-direction="asc">Sort by date asc</button>
+                <button class="sortByDateDecButton" data-sort-by="date" data-sort-direction="dec">Sort by date dec</button>
             </div>
-
-            <div class="form-control">
-                <label>Password</label>
-                <input type="password" placeholder="12345" id="password" name="password">
-                <i class="fas fa-check-circle">
-                    <img src="check.png" width="20px" alt="">
-                </i>
-                <i class="fas fa-exclamation-circle">
-                    <img src="sign.png" width="20px" alt="">
-                </i>
-                <small>Error Message</small>
-            </div>
-
-            <div class="form-control">
-                <label>Password confirm</label>
-                <input type="password" placeholder="andriy228" id="password-confirm" name="password-confirm">
-                <i class="fas fa-check-circle">
-                    <img src="check.png" width="20px" alt="">
-                </i>
-                <i class="fas fa-exclamation-circle">
-                    <img src="sign.png" width="20px" alt="">
-                </i>
-                <small>Error Message</small>
-            </div>
-
-            <button class="submit-button">Submit</button>
-        </form>
-    </div>
-
-    <div class="tab-content" id="tabContent2">
-        <div class="header">
-            <h2>Login</h2>
         </div>
-        <form class="form" id="login-form">
-            <div class="form-control">
-                <label>Username</label>
-                <input type="text" placeholder="andriy228" id="login-username">
-                <i class="fas fa-check-circle">
-                    <img src="check.png" width="20px" alt="">
-                </i>
-                <i class="fas fa-exclamation-circle">
-                    <img src="sign.png" width="20px" alt="">
-                </i>
-                <small>Error Message</small>
-            </div>
+        <div class="user_profiles_div"></div>
+    </main>
 
-            <div class="form-control">
-                <label>Password</label>
-                <label for="login-password"></label>
-                <input type="password" placeholder="12345" id="login-password">
-                <i class="fas fa-check-circle">
-                    <img src="check.png" width="20px" alt="">
-                </i>
-                <i class="fas fa-exclamation-circle">
-                    <img src="sign.png" width="20px" alt="">
-                </i>
-                <small>Error Message</small>
-            </div>
+    <footer>
+        <p>© 2024 YouHack. Not all rights reserved.</p>
+    </footer>
 
-            <button class="submit-login-button">Login</button>
-        </form>
+    <div class="dropDownMenu">
+        <button class="profileButton">Profile</button>
+        <button class="logOutButton">Log Out</button>
     </div>
-</div>
-
-    <div class="successModalWindow">
-        <span class="successModalWindowSpan">Congratulations! You are in!</span>
-        <button class="successModalWindowOkButton">Ok</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
